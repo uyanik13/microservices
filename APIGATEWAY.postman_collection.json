@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "4107bf89-6af4-4010-a37a-24df7f07703c",
+		"name": "APIGATEWAY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SHOP",
+			"item": [
+				{
+					"name": "GET ALL PRODUCTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMDYwNzk4MSwiZXhwIjoxNjAwNjExNTgxLCJuYmYiOjE2MDA2MDc5ODEsImp0aSI6InltYmdid3ZBaWg4ajhuTWMiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q5CANNSSSVDxyQ2ljJ10yjn6TLR4KSz1kFX_kPOXZ0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD NEW PRODUCT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMDYwNzk4MSwiZXhwIjoxNjAwNjExNTgxLCJuYmYiOjE2MDA2MDc5ODEsImp0aSI6InltYmdid3ZBaWg4ajhuTWMiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.q5CANNSSSVDxyQ2ljJ10yjn6TLR4KSz1kFX_kPOXZ0w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Lenovo L27i-28 27\" 75Hz 4ms (HDMI+Analog) Full HD Monitör 65E0KAC1TK",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "3D Desteği\tYok\nAğırlık\t4,74 kg\nBoyutlar\t443,5 x 611,9 x 210 mm\nÇözünürlük (max)\t1920 x 1080\nDahili Hoparlör\tYok\nDisplayPort\tYok\nDokunmatik Ekran\tYok\nD-Sub (VGA)\tVar\nDVI-D\tYok",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "1499",
+									"type": "text"
+								},
+								{
+									"key": "discounted_price",
+									"value": "1499",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "slug",
+									"value": "lenovo-l27i-28-27-75hz-4ms-hdmi-analog-full-hd-monitor-65e0kac1tk-p-HBV00000M82WS",
+									"type": "text"
+								},
+								{
+									"key": "thumbnail",
+									"type": "file",
+									"src": "/C:/Users/ugur_/Desktop/seo analysis/format_webp.jpg"
+								},
+								{
+									"key": "seo_title",
+									"value": "Lenovo L27i-28 27\" 75Hz 4ms (HDMI+Analog) Full HD Monitör 65E0KAC1TK fiyati",
+									"type": "text"
+								},
+								{
+									"key": "seo_description",
+									"value": "Lenovo L27i-28 27&amp;quot; 75Hz 4ms (HDMI+Analog) Full HD Monit&amp;#246;r en iyi fiyatla Hepsiburada&amp;#39;dan satın alın! Şimdi indirimli fiyatla sipariş verin, ayağınıza gelsin!",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ogur Uyanik",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password_confirm",
+									"value": "123456",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Current User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMDYwNjM3OCwiZXhwIjoxNjAwNjA5OTc4LCJuYmYiOjE2MDA2MDYzNzgsImp0aSI6Im0wSlVjTW95UHc2dHE3bFQiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.yAiaTeE0TbRz8YbeslX2Dk6AFWF26Ex2Hx79lOQTnXI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYwMDYwNzEwOCwiZXhwIjoxNjAwNjEwNzA4LCJuYmYiOjE2MDA2MDcxMDgsImp0aSI6ImtlaVBzS1RBRjFlRFdSUFYiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.MR3NyZR23vOkn8P0Ht0iB3ceoAy_2hj-bmDHGZXWYUw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "TEST",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiYzAzN2NiMTNjMGNlMDg2YWRiZWQ3ZmU5NWY5ZGNhOGZiNjQ2Y2QzYTY3ZGI2MmNhZDQzNTFlMTk5YjY1MDkzZDJkNGNjNmE4YjkwMmUxMmMiLCJpYXQiOjE2MDA1NDUxOTUsIm5iZiI6MTYwMDU0NTE5NSwiZXhwIjoxNjMyMDgxMTk1LCJzdWIiOiI0OCIsInNjb3BlcyI6W119.jzNL8b8Z5sKHt77kcTsWdgKp2hDT8G-vuGurqrU_q9W4DUnIVoEW7mhj8a0JCrllbOqJIFj_HsdyqqrVbuyxYc-HJriDmpPV2DikyovC2njhEsd5N_Gq4CM8sehkl3kdwLLdBiKmpHSMTrruRaT0ncPL9hrJIJ8qxRxwDdMVeGKlgA3XPQkFQRzTh9ZERytjRpItUCB4BUj5zZANHQTHxhwxYdx2ikEGgx5DhNPsMLLUbZbBCryvhE5JjZXJNMclehPA_W2V9fb6UN3-B5WfdvmjrYAfhK_HoVz5KsZMfE4C_BsHF6BAeKAeGVLSJIz3AydMMPbJFoFx-o0DHEZH3JilxNd7GcOaF4NsqaUyQ6RobMAvxv2_fZUiZfLWETqeZlx3-jRB4JjbMOI1wxw2N5v0W32A0z-vOmQ-gqZazel4b4AoX_nn_EzKwPgEgHXxawVugASynxLA8cpmBnx40qOEj-94ANy26ngfp1EM6PSUH971NjSLer4mtgwmOnie-57hRzaLJfZMGU0-Jml6m8DDchJwC0qMlyVLHpiySrvB9-MiBAsP5SicG1hB8ogzcAsl4zWDIwZ-3CppLE-Ot48XiCiZgy3WruB7UNKQV4TJLY6TJc_oWVGvql2FirB1BTFXz7xLOtFr5CWHMvARDq2wshahwlZrLXxfdjLKb3I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.haberalternatif.com/test",
+					"protocol": "https",
+					"host": [
+						"api",
+						"haberalternatif",
+						"com"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
